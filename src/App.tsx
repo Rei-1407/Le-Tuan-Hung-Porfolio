@@ -1,23 +1,13 @@
-import { Component, lazy, Suspense, type ReactNode } from "react";
+import { Component, type ReactNode } from "react";
 import { HashRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import siteData from "./data/site.json";
 import type { Site } from "./types/content";
 import Nav from "./components/Nav";
 import PageView from "./components/PageView";
-
-/* A redeploy renames the hashed admin chunk; a browser holding the previous
-   index.html then fails this import. One forced reload fetches the new index
-   and resolves it; a second failure falls through to the error screen. */
-const Admin = lazy(() =>
-  import("./admin/Admin").catch((err) => {
-    if (!sessionStorage.getItem("chunk-retry")) {
-      sessionStorage.setItem("chunk-retry", "1");
-      window.location.reload();
-      return new Promise<never>(() => {});
-    }
-    throw err;
-  })
-);
+/* Bundled statically on purpose: a code-split admin chunk gets orphaned when a
+   redeploy renames it while a browser still holds the previous index.html,
+   which surfaced as a blank /#/admin. One bundle = nothing to go stale. */
+import Admin from "./admin/Admin";
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error?: Error }> {
   state: { error?: Error } = {};
@@ -34,10 +24,7 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error?: Error }
         <p style={{ opacity: 0.8 }}>{this.state.error.message}</p>
         <button
           style={{ padding: "10px 24px", borderRadius: 8, border: 0, cursor: "pointer", fontWeight: 600 }}
-          onClick={() => {
-            sessionStorage.removeItem("chunk-retry");
-            window.location.reload();
-          }}
+          onClick={() => window.location.reload()}
         >
           Tải lại trang
         </button>
@@ -65,14 +52,7 @@ export default function App() {
     <ErrorBoundary>
       <HashRouter>
         <Routes>
-          <Route
-            path="/admin/*"
-            element={
-              <Suspense fallback={<div style={{ color: "#fff", padding: 40 }}>Đang tải trang quản trị…</div>}>
-                <Admin initialSite={site} />
-              </Suspense>
-            }
-          />
+          <Route path="/admin/*" element={<Admin initialSite={site} />} />
           <Route path="*" element={<SiteShell />} />
         </Routes>
       </HashRouter>
