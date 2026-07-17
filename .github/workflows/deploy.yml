@@ -23,7 +23,10 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
+      # npm install instead of npm ci: the lockfile hits npm/cli#4828 with the
+      # platform-specific wasm optionals (rolldown, oxlint, sharp) and npm ci
+      # refuses it, while install resolves the same tree fine.
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
