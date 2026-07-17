@@ -1,6 +1,7 @@
 import type { Project } from "../types/content";
 import { asset } from "../lib/asset";
 import { rich } from "../lib/richtext";
+import { sameSelection, useEditing } from "../admin/EditingContext";
 import "./SectionHeader.css";
 
 /** The 1920x135 title strip that opens every project.
@@ -9,9 +10,17 @@ import "./SectionHeader.css";
  *  copy and ornaments change. */
 export default function SectionHeader({ project }: { project: Project }) {
   const { header, theme, headerLogo, headerWordmark, headerDecorations } = project;
+  const editing = useEditing();
+  const sel = { kind: "header", projectId: project.id } as const;
 
   return (
-    <div className="sheader" data-theme={theme}>
+    <div
+      className="sheader"
+      data-theme={theme}
+      data-edit={editing ? "true" : undefined}
+      data-selected={editing && sameSelection(editing.selected, sel) ? "true" : undefined}
+      onClickCapture={editing ? (e) => { e.preventDefault(); editing.select(sel); } : undefined}
+    >
       {headerLogo && (
         <div className="sheader__brand">
           <img className="sheader__logo" src={asset(headerLogo.src)} alt={headerLogo.alt} />

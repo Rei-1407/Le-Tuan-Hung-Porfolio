@@ -137,23 +137,35 @@ export function ImageField<T extends Media | PlacedMedia>({
   return (
     <div className="ad-image">
       {label && <span className="ad-image__label">{label}</span>}
-      <div className="ad-image__row">
-        <img src={asset(value.src)} alt={value.alt} />
+      <div
+        className="ad-image__row"
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={(e) => {
+          e.preventDefault();
+          const f = e.dataTransfer.files?.[0];
+          if (f && f.type.startsWith("image/")) pick(f);
+        }}
+      >
+        <img
+          src={asset(value.src)}
+          alt={value.alt}
+          title="Bấm hoặc kéo-thả ảnh mới vào đây"
+          onClick={() => fileRef.current?.click()}
+        />
         <div className="ad-image__meta">
-          <code>{value.src}</code>
-          <input
-            type="text"
-            value={value.alt}
-            placeholder="Mô tả ảnh (alt)"
-            onChange={(e) => onChange({ ...value, alt: e.target.value })}
-          />
           <button
             type="button"
             disabled={busy}
             onClick={() => fileRef.current?.click()}
           >
-            {busy ? "Đang tải lên..." : "Thay ảnh"}
+            {busy ? "⏳ Đang tải lên..." : "🖼 Thay ảnh này"}
           </button>
+          <input
+            type="text"
+            value={value.alt}
+            placeholder="Ghi chú ảnh (không bắt buộc)"
+            onChange={(e) => onChange({ ...value, alt: e.target.value })}
+          />
           {error && <p className="ad-error">{error}</p>}
         </div>
       </div>

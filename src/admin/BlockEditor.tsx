@@ -218,16 +218,21 @@ export default function BlockEditor({
       return (
         <>
           <TextField
-            label="YouTube ID (vd: dQw4w9WgXcQ — để trống nếu chưa có)"
+            label="Dán link YouTube vào đây (để trống = chỉ hiện ảnh)"
             value={block.youtubeId ?? ""}
-            onChange={(v) => onChange({ ...block, youtubeId: v || undefined })}
+            onChange={(v) => {
+              // Accept a full YouTube URL or a bare 11-character id.
+              const m = v.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+              const id = m ? m[1] : v.trim();
+              onChange({ ...block, youtubeId: id || undefined });
+            }}
           />
           <TextField
             label="Hoặc đường dẫn file video trong repo (vd: /assets/videos/clip.mp4)"
             value={block.src ?? ""}
             onChange={(v) => onChange({ ...block, src: v || undefined })}
           />
-          <ImageField label="Ảnh poster" value={block.poster} token={token} onChange={(poster) => onChange({ ...block, poster })} />
+          <ImageField label="Ảnh hiển thị của video" value={block.poster} token={token} onChange={(poster) => onChange({ ...block, poster })} />
         </>
       );
 

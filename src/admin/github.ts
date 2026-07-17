@@ -119,3 +119,16 @@ export async function uploadImage(
 
 /** Link to the Actions tab so the owner can watch the redeploy. */
 export const ACTIONS_URL = `https://github.com/${OWNER}/${REPO}/actions`;
+
+/** Status of the most recent Pages deploy run. */
+export async function latestRunStatus(
+  token: string
+): Promise<{ status: string; conclusion: string | null } | null> {
+  try {
+    const data = await gh(token, `/repos/${OWNER}/${REPO}/actions/runs?per_page=1`);
+    const run = data.workflow_runs?.[0];
+    return run ? { status: run.status, conclusion: run.conclusion } : null;
+  } catch {
+    return null;
+  }
+}

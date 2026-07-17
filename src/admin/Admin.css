@@ -1,6 +1,212 @@
 /* Admin styling — deliberately plain and separate from the portfolio's design
    language so edits are easy to read. */
 
+/* ================= visual editor shell ================= */
+
+.adx {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #14161a;
+  color: #e8eaed;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+.adx button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.adx-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #2c3038;
+  flex-shrink: 0;
+}
+
+.adx-top__left,
+.adx-top__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.adx-logo {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.adx-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Live page canvas: the real site, scaled to the pane by the --u system. */
+.adx-canvas {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+  background: #0a0b0d;
+}
+
+.adx-side {
+  width: 400px;
+  flex-shrink: 0;
+  overflow: auto;
+  border-left: 1px solid #2c3038;
+  background: #1a1d22;
+}
+
+.adx-inspector {
+  padding: 16px;
+}
+
+.adx-inspector h2 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+.adx-inspector__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.adx-inspector__head h2 {
+  margin: 0;
+}
+
+.adx-toolbar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.adx-hr {
+  border: 0;
+  border-top: 1px solid #2c3038;
+  margin: 14px 0;
+}
+
+.adx-hint {
+  background: #191c21;
+  border: 1px solid #2c3038;
+  border-radius: 10px;
+  padding: 4px 16px;
+  line-height: 1.6;
+  color: #b7bcc4;
+}
+
+.adx-hint b {
+  color: #e8eaed;
+}
+
+/* ---- selection outlines on the canvas ---- */
+.adx-canvas [data-edit] {
+  cursor: pointer;
+  position: relative;
+}
+
+.adx-canvas [data-edit]:hover {
+  outline: 2px dashed #2f81f7;
+  outline-offset: -2px;
+}
+
+.adx-canvas [data-edit][data-selected="true"] {
+  outline: 3px solid #2f81f7;
+  outline-offset: -3px;
+}
+
+/* ---- add bars rendered inside the page while editing ---- */
+.adx-canvas .edit-add {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 14px 24px;
+  padding: 14px;
+  border: 2px dashed rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.adx-canvas .edit-add:hover {
+  background: rgba(47, 129, 247, 0.35);
+  border-color: #2f81f7;
+}
+
+.adx-canvas .edit-add--project {
+  margin: 20px 24px 28px;
+}
+
+/* ---- colour swatches ---- */
+.adx-swatches {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.adx-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #3a4048;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.adx-swatch:hover {
+  transform: scale(1.08);
+}
+
+.adx-swatch.is-active {
+  border-color: #2f81f7;
+  box-shadow: 0 0 0 2px #2f81f7;
+}
+
+/* ---- publish badge ---- */
+.adx-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.adx-badge--busy {
+  background: #2b2410;
+  border: 1px solid #9e6a03;
+}
+
+.adx-badge--ok {
+  background: #12261a;
+  border: 1px solid #238636;
+}
+
+.adx-badge--err {
+  background: #2b1618;
+  border: 1px solid #da3633;
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+  .adx-side {
+    width: 340px;
+  }
+}
+
 .ad,
 .ad-login {
   min-height: 100vh;
