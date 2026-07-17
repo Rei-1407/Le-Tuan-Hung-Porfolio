@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Le Tuan Hung — Branding, 2D Graphic, UX-UI & Concept Game" />
+    <title>Le Tuan Hung — Portfolio</title>
+    <style>
+      /* Brand display font used for the HOTNDOGS wordmark in the Figma source.
+         Super Caramel is licensed and cannot come from a CDN — drop the file at
+         public/fonts/SuperCaramel.woff2 (and/or .otf) and it is picked up
+         automatically. Until then the stack falls back to Montserrat. */
+      @font-face {
+        font-family: "Super Caramel";
+        src: url("%BASE_URL%fonts/SuperCaramel.woff2") format("woff2"),
+             url("%BASE_URL%fonts/SuperCaramel.otf") format("opentype");
+        font-weight: 400;
+        font-display: swap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

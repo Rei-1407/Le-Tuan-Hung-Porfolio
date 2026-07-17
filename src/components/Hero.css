@@ -1,0 +1,97 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(840 * var(--u));
+  overflow: hidden;
+  background: var(--c-black);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Slow drift — ours, not from the file. */
+  animation: hero-drift 24s ease-in-out infinite alternate;
+}
+
+@keyframes hero-drift {
+  from {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.12) translate3d(calc(-12 * var(--u)), calc(-8 * var(--u)), 0);
+  }
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: var(--c-black);
+}
+
+.hero__inner {
+  position: absolute;
+  top: calc(283 * var(--u));
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.hero__inner[data-align="center"] {
+  justify-content: center;
+}
+
+.hero__inner[data-align="left"] {
+  justify-content: flex-start;
+  padding-left: calc(132 * var(--u));
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: calc(128 * var(--u));
+  font-weight: 800;
+  line-height: calc(156 / 128);
+  color: var(--c-white);
+  white-space: nowrap;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__row {
+  display: flex;
+  justify-content: space-between;
+  /* Figma places the row 144px below the title's top; the title box is 156px
+     tall, so it starts 12px back into that box. */
+  margin-top: calc(-12 * var(--u));
+  font-size: calc(36 * var(--u));
+  font-weight: 400;
+  line-height: calc(44 / 36);
+  color: var(--c-white);
+  white-space: nowrap;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(calc(24 * var(--u)));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg,
+  .hero__title,
+  .hero__row {
+    animation: none;
+  }
+}

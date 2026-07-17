@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-black);
+}
+
+body {
+  font-family: var(--f-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* The Figma canvas is 1920px wide. `--u` is one design pixel: it resolves to
+   exactly 1px at a 1920px-wide container and scales proportionally below that,
+   so every measurement copied out of Figma stays true at any viewport. */
+.page {
+  container-type: inline-size;
+  max-width: var(--canvas-w);
+  margin: 0 auto;
+  background: var(--c-black);
+  overflow-x: hidden;
+}
+
+.page * {
+  --u: calc(100cqw / 1920);
+}
+
+/* Below tablet the canvas stops shrinking and the layout reflows instead,
+   otherwise text would scale down past legibility. */
+@media (max-width: 760px) {
+  .page * {
+    --u: calc(100cqw / 900);
+  }
+}
+
+.u-brand {
+  font-family: var(--f-brand);
+  font-weight: 400;
+}
+
+.u-red {
+  color: var(--c-red-brand);
+}
+
+/* Scroll reveal — animation is our own addition, layout stays as designed. */
+.reveal {
+  opacity: 0;
+  transform: translateY(calc(28 * var(--u)));
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

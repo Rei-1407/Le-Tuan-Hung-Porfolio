@@ -1,0 +1,424 @@
+{
+  "siteName": "Le Tuan Hung — Portfolio",
+  "pages": [
+    {
+      "id": "branding",
+      "slug": "/branding",
+      "navLabel": "Branding",
+      "hero": {
+        "title": "BRANDING",
+        "name": "Le Tuan Hung",
+        "year": "2026",
+        "background": { "src": "/assets/branding/hero-bg.png", "alt": "HOTNDOGS brand identity mockups" },
+        "overlay": 0.7,
+        "align": "center"
+      },
+      "projects": [
+        {
+          "id": "hotndogs-identity",
+          "header": {
+            "vn": "Bộ nhận diện thương hiệu cho thương hiệu đồ ăn nhanh [[b:HOTNDOGS]]",
+            "en": "Branding Identity for [[b:HOTNDOGS]] - Fast food brand"
+          },
+          "theme": "red",
+          "headerLogo": { "src": "/assets/branding/logo-mark.png", "alt": "HOTNDOGS logo" },
+          "headerWordmark": "HOTNDOGS",
+          "headerDecorations": [
+            { "media": { "src": "/assets/branding/header-icon-1.png", "alt": "" }, "x": 1585, "y": 32, "w": 56, "h": 71 },
+            { "media": { "src": "/assets/branding/header-icon-2.png", "alt": "" }, "x": 1612, "y": 65, "w": 93, "h": 85 },
+            { "media": { "src": "/assets/branding/header-icon-3.png", "alt": "" }, "x": 1776, "y": 32, "w": 85, "h": 85 }
+          ],
+          "background": "cream",
+          "blocks": [
+            {
+              "type": "brand-info",
+              "logo": { "src": "/assets/branding/logo-main.png", "alt": "HOTNDOGS main logo" },
+              "packaging": { "src": "/assets/branding/packaging.png", "alt": "HOTNDOGS packaging" },
+              "fieldLabel": "Lĩnh vực/Field",
+              "fieldBody": {
+                "vn": "Kinh doanh đồ ăn nhanh: hotdog, soda,...",
+                "en": "Fastfood business, specially hotdog, soda,..."
+              },
+              "meaningLabel": "Ý nghĩa logo/Logo meaning",
+              "meaningBody": {
+                "vn": "[[r:HOTNDOGS]] là sự kết hợp giữa:\n[[r:HOT]]: nóng, năng lượng, nổi bật, cá tính. [[r:DOGS]]: thân thiện, trung thành, gần gũi. Logo chú chó và chữ [[r:HOTNDOGS]] dạng tròn, mạnh tạo nên cảm giác: “Một chú chó có cá tính mạnh nhưng vẫn rất đáng yêu.”",
+                "en": "[[b:HOTNDOGS]] is a combination of: [[b:HOT]]: heat, energy, boldness, and personality. [[b:DOGS]]: friendliness, loyalty, playfulness, and familiarity. [[b:HOTNDOGS]], with its slightly bold, rounded typography, creates the feeling of: “A dog with a strong personality, yet still irresistibly lovable.”"
+              },
+              "visionLabel": "Tầm nhìn và sứ mệnh/Vision & mission",
+              "vision": {
+                "vn": "Trở thành một thương hiệu biểu tượng của sự vui vẻ, cá tính và năng lượng tích cực, mang đến những trải nghiệm đáng nhớ và đầy cảm hứng.",
+                "en": "To become an iconic brand of fun, personality, and positive energy, creating memorable and inspiring experiences."
+              },
+              "mission": {
+                "vn": "Tạo ra những trải nghiệm vui vẻ, gần gũi và đầy năng lượng, kết nối mọi người thông qua sự hài hước, cá tính và tinh thần “HOT”.",
+                "en": "To create playful, relatable, and energetic experiences that bring people together through humor, personality, and a little bit of “HOT” energy."
+              },
+              "ctaLabel": "Khám phá ngay"
+            }
+          ]
+        },
+        {
+          "id": "hotndogs-guidelines",
+          "theme": "red",
+          "background": "gradient-cream-red",
+          "blocks": [
+            {
+              "type": "split",
+              "mt": -25,
+              "inset": 132,
+              "gap": 0,
+              "cells": [
+                {
+                  "w": 1655,
+                  "h": 512,
+                  "style": "card",
+                  "images": [
+                    { "src": "/assets/branding/guide-size.png", "alt": "Logo size guide", "pos": { "x": 45, "y": 116, "w": 338, "h": 304 } },
+                    { "src": "/assets/branding/guide-construction.png", "alt": "Logo construction grid", "pos": { "x": 428, "y": 0, "w": 800, "h": 438 } },
+                    { "src": "/assets/branding/guide-safe-area.png", "alt": "Logo safe area", "pos": { "x": 1290, "y": 131, "w": 321, "h": 273 } }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "split",
+              "mt": 34,
+              "inset": 132,
+              "gap": 0,
+              "cells": [
+                {
+                  "w": 1655,
+                  "h": 512,
+                  "style": "card",
+                  "images": [
+                    { "src": "/assets/branding/palette.png", "alt": "Brand color palette", "pos": { "x": 0, "y": 70, "w": 702, "h": 218 } },
+                    { "src": "/assets/branding/logo-variant-light.png", "alt": "Logo on light", "pos": { "x": 102, "y": 299, "w": 498, "h": 146 } },
+                    { "src": "/assets/branding/logo-variant-dark.png", "alt": "Logo on dark", "pos": { "x": 749, "y": 50, "w": 466, "h": 227 } },
+                    { "src": "/assets/branding/logo-badge-black.png", "alt": "Logo badge black", "pos": { "x": 1215, "y": 66, "w": 191, "h": 195 } },
+                    { "src": "/assets/branding/logo-badge-yellow.png", "alt": "Logo badge yellow", "pos": { "x": 1441, "y": 97, "w": 170, "h": 123 } },
+                    { "src": "/assets/branding/typography.png", "alt": "Sugar Bread typeface", "pos": { "x": 928, "y": 288, "w": 573, "h": 190 } }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bilingual-text",
+              "mt": 38,
+              "align": "justify",
+              "size": 24,
+              "inset": 132,
+              "text": {
+                "vn": "Tín hiệu nhận diện: Chú chó mascot cầm những sản phẩm đồ ăn nhanh một cách thú vị như dùng cây xúc xích làm gậy bóng chày, dùng tương cà làm tàu vũ trụ, ôm hộp khoai tây chiên to, đóng giả làm shipper,...",
+                "en": "Brand Signal: The mascot dog interacts with fast-food products in fun and unexpected ways—for example, using a sausage as a baseball bat, turning ketchup into a spaceship, hugging an oversized box of fries, dressing up as a delivery driver, and more."
+              }
+            },
+            {
+              "type": "mascot-row",
+              "mt": 38,
+              "inset": 132,
+              "items": [
+                { "src": "/assets/branding/mascot-1.png", "alt": "Mascot with sausage bat", "w": 243, "h": 303 },
+                { "src": "/assets/branding/mascot-2.png", "alt": "Mascot with fries", "w": 288, "h": 302 },
+                { "src": "/assets/branding/mascot-3.png", "alt": "Mascot delivery", "w": 250, "h": 244 },
+                { "src": "/assets/branding/mascot-4.png", "alt": "Mascot with ketchup", "w": 409, "h": 303 }
+              ]
+            }
+          ],
+          "pb": 79
+        },
+        {
+          "id": "hotndogs-products",
+          "theme": "red",
+          "background": "red-deep",
+          "blocks": [
+            { "type": "section-title", "mt": 18, "text": "SẢN PHẨM (PRODUCT)" },
+            {
+              "type": "image-grid",
+              "mt": 46,
+              "columns": 3,
+              "style": "card",
+              "inset": 125,
+              "colGap": 42,
+              "rowGap": 33,
+              "cells": [
+                { "images": [{ "src": "/assets/branding/product-burger.png", "alt": "Burger box", "pos": { "x": 41, "y": 49, "w": 460, "h": 447 } }] },
+                { "images": [{ "src": "/assets/branding/product-chips.png", "alt": "Fries packaging", "pos": { "x": -41, "y": -39, "w": 617, "h": 588 } }] },
+                { "images": [{ "src": "/assets/branding/product-hotdog.png", "alt": "Hotdog box", "pos": { "x": 17, "y": 84, "w": 479, "h": 342 } }] },
+                {
+                  "images": [
+                    { "src": "/assets/branding/product-card-1.png", "alt": "Business card front", "pos": { "x": 79, "y": 27, "w": 368, "h": 216 } },
+                    { "src": "/assets/branding/product-card-2.png", "alt": "Business card back", "pos": { "x": 76, "y": 263, "w": 371, "h": 218 } }
+                  ]
+                },
+                { "images": [{ "src": "/assets/branding/product-poster.png", "alt": "Staff card", "pos": { "x": 147, "y": 92, "w": 242, "h": 342 } }] },
+                {
+                  "images": [
+                    { "src": "/assets/branding/product-image-10.png", "alt": "Cover banner", "pos": { "x": 53, "y": 61, "w": 419, "h": 189 } },
+                    { "src": "/assets/branding/product-image-11.png", "alt": "Cover banner variant", "pos": { "x": 53, "y": 268, "w": 415, "h": 183 } }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "section-title",
+              "mt": 78,
+              "text": "BỘ TRUYỀN THÔNG NHẬN DIỆN THƯƠNG HIỆU",
+              "text2": "(BRAND COMMUNICATIONS MATERIAL)"
+            },
+            {
+              "type": "free",
+              "mt": 60,
+              "height": 617,
+              "items": [
+                { "card": true, "x": 127, "y": 0, "w": 523, "h": 617 },
+                { "media": { "src": "/assets/branding/comm-standee.png", "alt": "Standee" }, "x": 193, "y": 37, "w": 389, "h": 544 },
+                { "card": true, "x": 692, "y": 0, "w": 1091, "h": 366 },
+                { "media": { "src": "/assets/branding/comm-banner.png", "alt": "Facebook cover" }, "x": 813, "y": 22, "w": 849, "h": 321 },
+                { "media": { "src": "/assets/branding/logo-group-1.png", "alt": "Logo lockup" }, "x": 716, "y": 448, "w": 492, "h": 150 },
+                { "media": { "src": "/assets/branding/logo-group-2.png", "alt": "Logo lockup" }, "x": 1285, "y": 448, "w": 492, "h": 150 }
+              ]
+            },
+            {
+              "type": "split",
+              "mt": 61,
+              "inset": 282,
+              "gap": 50,
+              "cells": [
+                { "w": 809, "h": 983, "style": "bare", "images": [
+                  { "src": "/assets/branding/comm-collage-large.png", "alt": "Facebook page mockup", "pos": { "x": 0, "y": 0, "w": 809, "h": 393 } },
+                  { "src": "/assets/branding/comm-collage-wide.png", "alt": "Street poster mockup", "pos": { "x": 0, "y": 441, "w": 809, "h": 542 } }
+                ] },
+                { "w": 497, "h": 983, "style": "bare", "images": [
+                  { "src": "/assets/branding/comm-collage-tall.png", "alt": "Christmas post mockup", "pos": { "x": 0, "y": 0, "w": 497, "h": 983 } }
+                ] }
+              ]
+            },
+            {
+              "type": "banner",
+              "mt": 43,
+              "media": { "src": "/assets/branding/animlogo.png", "alt": "HOTNDOGS logo animation" },
+              "inset": 282,
+              "w": 1356
+            },
+            {
+              "type": "icon-strip",
+              "mt": 63,
+              "media": { "src": "/assets/branding/footer-icon-group.png", "alt": "" },
+              "count": 6
+            }
+          ],
+          "pb": 78
+        }
+      ]
+    },
+    {
+      "id": "graphic",
+      "slug": "/2d-graphic",
+      "navLabel": "2D Graphic",
+      "hero": {
+        "title": "2D GRAPHIC",
+        "name": "Le Tuan Hung",
+        "year": "2026",
+        "background": { "src": "/assets/graphic/hero-bg.png", "alt": "Water puppet theatre illustration" },
+        "overlay": 0.7,
+        "align": "center"
+      },
+      "projects": [
+        {
+          "id": "waterpuppet-brochure",
+          "header": {
+            "vn": "E-BROUCHURE VỞ KỊCH MÚA RỐI NƯỚC “CON RỒNG CHÁU TIÊN”",
+            "en": "E-BROUCHURE WATERPUPPET “CON RONG CHAU TIEN”"
+          },
+          "theme": "dark",
+          "background": "maroon",
+          "blocks": [
+            {
+              "type": "image-grid",
+              "mt": 41,
+              "columns": 2,
+              "style": "bare",
+              "inset": 135,
+              "colGap": 33,
+              "rowGap": 26,
+              "cells": [
+                { "images": [{ "src": "/assets/graphic/brochure-01.png", "alt": "E-brochure cover" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-02.png", "alt": "E-brochure spread" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-03.png", "alt": "E-brochure page" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-04.png", "alt": "E-brochure page" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-05.png", "alt": "E-brochure page" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-06.png", "alt": "E-brochure page" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-07.png", "alt": "E-brochure page" }] },
+                { "images": [{ "src": "/assets/graphic/brochure-08.png", "alt": "E-brochure page" }] }
+              ]
+            },
+            {
+              "type": "video",
+              "mt": 54,
+              "poster": { "src": "/assets/graphic/brochure-video-poster.png", "alt": "Con Rồng Cháu Tiên trailer" },
+              "inset": 135,
+              "w": 1648,
+              "h": 927
+            }
+          ],
+          "pb": 92
+        },
+        {
+          "id": "amath",
+          "header": {
+            "vn": "Bộ ấn phẩm truyền thông cho Trung tâm Toán A+ Math",
+            "en": "Communication Product for A+Math"
+          },
+          "theme": "navy",
+          "headerDecorations": [
+            { "media": { "src": "/assets/graphic/deco-left.png", "alt": "" }, "x": 0, "y": 0, "w": 226, "h": 109 },
+            { "media": { "src": "/assets/graphic/deco-right.png", "alt": "" }, "x": 1783, "y": 2, "w": 137, "h": 108 }
+          ],
+          "background": "navy-deep",
+          "blocks": [
+            {
+              "type": "split",
+              "mt": 39,
+              "inset": 142,
+              "gap": 45,
+              "cells": [
+                {
+                  "w": 440,
+                  "h": 440,
+                  "style": "bare",
+                  "images": [{ "src": "/assets/graphic/amath-avatar.png", "alt": "A+Math avatar" }],
+                  "caption": { "vn": "Ảnh đại diện", "en": "Avatar" }
+                },
+                {
+                  "w": 1156,
+                  "h": 440,
+                  "style": "bare",
+                  "images": [{ "src": "/assets/graphic/amath-cover.png", "alt": "A+Math cover" }],
+                  "caption": { "vn": "Ảnh bìa", "en": "Cover" }
+                }
+              ]
+            },
+            {
+              "type": "image-grid",
+              "mt": 44,
+              "columns": 4,
+              "style": "bare",
+              "inset": 137,
+              "colGap": 36,
+              "rowGap": 36,
+              "cells": [
+                { "images": [{ "src": "/assets/graphic/amath-teacher-1.png", "alt": "Teacher post — Đặng Châu Anh" }] },
+                { "images": [{ "src": "/assets/graphic/amath-teacher-2.png", "alt": "Teacher post — Nguyễn Hương Giang" }] },
+                { "images": [{ "src": "/assets/graphic/amath-teacher-3.png", "alt": "Teacher post — Nguyễn Thị Nguyệt Hà" }] },
+                { "images": [{ "src": "/assets/graphic/amath-teacher-4.png", "alt": "Teacher post — Phạm Minh Quân" }] }
+              ]
+            },
+            {
+              "type": "split",
+              "mt": 27,
+              "inset": 137,
+              "gap": 42,
+              "cells": [
+                { "w": 1092, "h": 685, "style": "bare", "images": [{ "src": "/assets/graphic/amath-poster-opening.png", "alt": "Opening announcement post" }] },
+                { "w": 512, "h": 682, "style": "bare", "images": [{ "src": "/assets/graphic/amath-post-teachers.png", "alt": "Teacher introduction post" }] }
+              ],
+              "caption": { "vn": "Bài đăng Facebook", "en": "Facebook’s Post" },
+              "captionMt": 41
+            }
+          ],
+          "pb": 32
+        },
+        {
+          "id": "game-posters",
+          "header": {
+            "vn": "BÀI ĐĂNG POSTER GAME",
+            "en": "GAME POSTERS"
+          },
+          "theme": "green",
+          "background": "green-deep",
+          "blocks": [
+            {
+              "type": "image-grid",
+              "mt": 39,
+              "columns": 4,
+              "style": "bare",
+              "inset": 142,
+              "colGap": 36,
+              "rowGap": 36,
+              "cells": [
+                { "images": [{ "src": "/assets/graphic/poster-3l.png", "alt": "Poster — đội trưởng Team 3L" }] },
+                { "images": [{ "src": "/assets/graphic/poster-cung-nhau.png", "alt": "Poster — đội trưởng Cùng Nhau" }] },
+                { "images": [{ "src": "/assets/graphic/poster-weone.png", "alt": "Poster — đội trưởng WeOne" }] },
+                { "images": [{ "src": "/assets/graphic/poster-no-van-de.png", "alt": "Poster — đội trưởng No Vấn Đề" }] }
+              ]
+            },
+            {
+              "type": "bilingual-text",
+              "mt": 78,
+              "align": "center",
+              "size": 24,
+              "text": {
+                "vn": "DESIGNED BY HUNG LE",
+                "en": "Thiết kế bởi Hùng Lê"
+              }
+            }
+          ],
+          "pb": 52
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "slug": "/concept",
+      "navLabel": "Concept",
+      "hero": {
+        "title": "UX-UI & CONCEPT GAME",
+        "name": "Le Tuan Hung",
+        "year": "2026",
+        "background": { "src": "/assets/game/hero-bg.png", "alt": "Game concept environment art" },
+        "overlay": 0.7,
+        "align": "left"
+      },
+      "projects": [],
+      "comingSoon": {
+        "vn": "Nội dung đang được cập nhật...",
+        "en": "Content is being updated..."
+      }
+    },
+    {
+      "id": "game",
+      "slug": "/game",
+      "navLabel": "Game",
+      "hero": {
+        "title": "UX-UI & CONCEPT GAME",
+        "name": "Le Tuan Hung",
+        "year": "2026",
+        "background": { "src": "/assets/game/hero-bg.png", "alt": "Game concept environment art" },
+        "overlay": 0.7,
+        "align": "left"
+      },
+      "projects": [],
+      "comingSoon": {
+        "vn": "Nội dung đang được cập nhật...",
+        "en": "Content is being updated..."
+      }
+    },
+    {
+      "id": "cv",
+      "slug": "/my-cv",
+      "navLabel": "My CV",
+      "hero": {
+        "title": "MY CV",
+        "name": "Le Tuan Hung",
+        "year": "2026",
+        "overlay": 0,
+        "align": "center"
+      },
+      "projects": [],
+      "comingSoon": {
+        "vn": "Nội dung đang được cập nhật...",
+        "en": "Content is being updated..."
+      }
+    }
+  ]
+}

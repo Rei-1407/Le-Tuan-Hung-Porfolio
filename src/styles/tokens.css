@@ -1,0 +1,61 @@
+/* Design tokens extracted from Figma: Portfolio / EIaHHdCyLDu9uJnd6k4pZG
+   Do not invent values here — every token below is read from the source file. */
+
+:root {
+  /* ---- Palette ---- */
+  --c-nav: #b21111;
+  --c-red: #f90808;
+  --c-red-deep: #bc272d;
+  --c-red-brand: #ff0606;
+  --c-cream: #ffd481;
+  --c-cream-alt: #ffd381;
+  --c-white: #ffffff;
+  --c-white-soft: #fff5f5;
+  --c-black: #000000;
+  --c-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Section header themes — sampled from the source file */
+  --theme-red-bg: #f90808;
+  --theme-red-fg: #ffffff;
+  --theme-cream-bg: #ffd481;
+  --theme-cream-fg: #000000;
+  --theme-navy-bg: #1a2a72;
+  --theme-navy-fg: #ffffff;
+  --theme-green-bg: #00af26;
+  --theme-green-fg: #ffffff;
+  --theme-dark-bg: #510608;
+  --theme-dark-fg: #ffffff;
+
+  /* Section backgrounds — sampled from the source file */
+  --bg-red-deep: #bc272d;
+  --bg-maroon: #2f1010;
+  --bg-navy-deep: #0f183c;
+  --bg-green-deep: #1a5627;
+  --bg-cream: #ffd481;
+
+  /* ---- Gradients ---- */
+  --g-cream-to-red: linear-gradient(to top, var(--c-red-deep) 0%, var(--c-cream-alt) 100%);
+
+  /* ---- Typography ---- */
+  --f-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-brand: "Super Caramel", var(--f-sans);
+
+  --fs-hero: 128px;
+  --fs-hero-sub: 36px;
+  --fs-nav: 24px;
+  --fs-section-title: 30px;
+  --fs-header: 24px;
+  --fs-label: 20px;
+  --fs-body: 18px;
+  --fs-body-sm: 16px;
+  --fs-caption: 14px;
+  --fs-brand-lg: 48px;
+
+  /* ---- Layout ---- */
+  --canvas-w: 1920px;
+  --nav-h: 58px;
+  --header-h: 135px;
+  --gutter: 132px;
+  --radius-card: 24px;
+  --radius-img: 16px;
+}

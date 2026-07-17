@@ -1,0 +1,29 @@
+/* flow-root keeps child margins (incl. negative overlaps) inside the band so
+   the background edge stays exactly where the design puts it. */
+.project__body {
+  display: flow-root;
+}
+
+.project__body[data-bg="cream"] {
+  background: var(--bg-cream);
+}
+
+.project__body[data-bg="gradient-cream-red"] {
+  background: linear-gradient(to bottom, var(--c-cream-alt) 0%, var(--c-red-deep) 100%);
+}
+
+.project__body[data-bg="red-deep"] {
+  background: var(--bg-red-deep);
+}
+
+.project__body[data-bg="maroon"] {
+  background: var(--bg-maroon);
+}
+
+.project__body[data-bg="navy-deep"] {
+  background: var(--bg-navy-deep);
+}
+
+.project__body[data-bg="green-deep"] {
+  background: var(--bg-green-deep);
+}

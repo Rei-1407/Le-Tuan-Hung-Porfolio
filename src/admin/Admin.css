@@ -1,0 +1,480 @@
+/* Admin styling — deliberately plain and separate from the portfolio's design
+   language so edits are easy to read. */
+
+.ad,
+.ad-login {
+  min-height: 100vh;
+  background: #14161a;
+  color: #e8eaed;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+.ad {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 20px 80px;
+}
+
+.ad h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.ad h2 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+.ad button {
+  cursor: pointer;
+  font: inherit;
+}
+
+/* ---- login ---- */
+.ad-login {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.ad-login__card {
+  max-width: 520px;
+  background: #1d2026;
+  border: 1px solid #2c3038;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.ad-login__card h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.ad-login__card p {
+  line-height: 1.5;
+}
+
+.ad-login__card ol {
+  line-height: 1.7;
+  padding-left: 20px;
+  color: #b7bcc4;
+}
+
+.ad-login__card form {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.ad-login__card input {
+  flex: 1;
+  background: #14161a;
+  border: 1px solid #2c3038;
+  border-radius: 8px;
+  color: inherit;
+  padding: 10px 12px;
+}
+
+.ad-login__card button {
+  background: #2f81f7;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+/* ---- top bar ---- */
+.ad-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ad-top__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ad-top__actions button {
+  border-radius: 8px;
+  padding: 8px 14px;
+  border: 1px solid #2c3038;
+  background: #1d2026;
+  color: inherit;
+}
+
+.ad-save {
+  background: #238636 !important;
+  border-color: #238636 !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.ad-save:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.ad-ghost {
+  opacity: 0.7;
+}
+
+.ad-status {
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 12px;
+}
+
+.ad-status--ok {
+  background: #12261a;
+  border: 1px solid #238636;
+}
+
+.ad-status--error {
+  background: #2b1618;
+  border: 1px solid #da3633;
+}
+
+.ad-status a {
+  color: #58a6ff;
+}
+
+/* ---- tabs ---- */
+.ad-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.ad-tabs button {
+  border: 1px solid #2c3038;
+  background: #1d2026;
+  color: #b7bcc4;
+  border-radius: 999px;
+  padding: 7px 16px;
+}
+
+.ad-tabs button.is-active {
+  background: #2f81f7;
+  border-color: #2f81f7;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- panels ---- */
+.ad-panel {
+  background: #1d2026;
+  border: 1px solid #2c3038;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.ad-panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.ad-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ad-row > * {
+  flex: 1;
+  min-width: 160px;
+}
+
+/* ---- fields ---- */
+.ad-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ad-field span {
+  display: block;
+  font-size: 12px;
+  color: #9aa0a8;
+  margin-bottom: 4px;
+}
+
+.ad-field input,
+.ad-field textarea,
+.ad-field select {
+  width: 100%;
+  box-sizing: border-box;
+  background: #14161a;
+  border: 1px solid #2c3038;
+  border-radius: 8px;
+  color: inherit;
+  padding: 8px 10px;
+  font: inherit;
+  resize: vertical;
+}
+
+.ad-bilingual {
+  border-left: 2px solid #2c3038;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.ad-error {
+  color: #ff7b72;
+  margin: 6px 0 0;
+}
+
+.ad-note {
+  color: #9aa0a8;
+  margin: 0 0 8px;
+}
+
+/* ---- images ---- */
+.ad-image {
+  margin-bottom: 12px;
+}
+
+.ad-image__label {
+  display: block;
+  font-size: 12px;
+  color: #9aa0a8;
+  margin-bottom: 4px;
+}
+
+.ad-image__row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ad-image__row > img {
+  width: 120px;
+  height: 84px;
+  object-fit: contain;
+  background: repeating-conic-gradient(#22262c 0 25%, #191c21 0 50%) 0 0 / 16px 16px;
+  border-radius: 8px;
+  border: 1px solid #2c3038;
+  flex-shrink: 0;
+}
+
+.ad-image__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.ad-image__meta code {
+  display: block;
+  font-size: 11px;
+  color: #9aa0a8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+.ad-image__meta input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #14161a;
+  border: 1px solid #2c3038;
+  border-radius: 8px;
+  color: inherit;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+.ad-image__meta button {
+  border: 1px solid #2c3038;
+  background: #262a31;
+  color: inherit;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+/* ---- blocks ---- */
+.ad-blocks {
+  margin-top: 14px;
+}
+
+.ad-block,
+.ad-cell {
+  border: 1px solid #2c3038;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #191c21;
+}
+
+.ad-block > summary,
+.ad-cell > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ad-block > summary::-webkit-details-marker,
+.ad-cell > summary::-webkit-details-marker {
+  display: none;
+}
+
+.ad-block__type {
+  font-weight: 600;
+}
+
+.ad-block__tools {
+  display: flex;
+  gap: 6px;
+}
+
+.ad-block__body {
+  padding: 4px 14px 14px;
+  border-top: 1px solid #2c3038;
+}
+
+.ad-cell {
+  margin: 8px 0;
+}
+
+.ad-cell > *:not(summary) {
+  padding: 0 12px 12px;
+}
+
+.ad-mini {
+  border: 1px solid #2c3038;
+  background: #262a31;
+  color: inherit;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.ad-mini:disabled {
+  opacity: 0.4;
+}
+
+.ad-mini--danger {
+  color: #ff7b72;
+}
+
+.ad-add {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px dashed #3a4048;
+  background: transparent;
+  color: #58a6ff;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.ad-panel--new {
+  border-style: dashed;
+}
+
+/* ---- preset picker ---- */
+.ad-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.ad-modal__card {
+  background: #1d2026;
+  border: 1px solid #2c3038;
+  border-radius: 14px;
+  padding: 22px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow: auto;
+  color: #e8eaed;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.ad-modal__card h2 {
+  margin: 0 0 14px;
+}
+
+.ad-presets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ad-preset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #2c3038;
+  background: #191c21;
+  border-radius: 10px;
+  padding: 12px;
+  color: inherit;
+  text-align: left;
+  transition: border-color 0.15s ease;
+}
+
+.ad-preset:hover {
+  border-color: #2f81f7;
+}
+
+.ad-preset__thumb {
+  color: #58a6ff;
+  display: block;
+}
+
+.ad-preset__thumb svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #14161a;
+  border-radius: 6px;
+}
+
+.ad-preset__label {
+  font-weight: 600;
+}
+
+.ad-preset__hint {
+  font-size: 12px;
+  color: #9aa0a8;
+}
+
+/* ---- preview mode ---- */
+.ad-preview__bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #14161a;
+  color: #e8eaed;
+  padding: 10px 16px;
+  font-family: system-ui, sans-serif;
+  border-bottom: 1px solid #2c3038;
+}
+
+.ad-preview__bar button {
+  border: 1px solid #2c3038;
+  background: #262a31;
+  color: inherit;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
