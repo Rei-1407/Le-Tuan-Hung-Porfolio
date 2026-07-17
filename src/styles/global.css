@@ -30,26 +30,19 @@ a {
 }
 
 /* The Figma canvas is 1920px wide. `--u` is one design pixel: it resolves to
-   exactly 1px at a 1920px-wide container and scales proportionally below that,
-   so every measurement copied out of Figma stays true at any viewport. */
+   exactly 1px at a 1920px-wide viewport and scales proportionally in BOTH
+   directions — a 2560px monitor sees the design uniformly enlarged with no
+   dead margins, a narrower window sees it uniformly reduced. Every measurement
+   copied out of Figma stays true at any size. */
 .page {
   container-type: inline-size;
-  max-width: var(--canvas-w);
-  margin: 0 auto;
+  width: 100%;
   background: var(--c-black);
   overflow-x: hidden;
 }
 
 .page * {
   --u: calc(100cqw / 1920);
-}
-
-/* Below tablet the canvas stops shrinking and the layout reflows instead,
-   otherwise text would scale down past legibility. */
-@media (max-width: 760px) {
-  .page * {
-    --u: calc(100cqw / 900);
-  }
 }
 
 .u-brand {

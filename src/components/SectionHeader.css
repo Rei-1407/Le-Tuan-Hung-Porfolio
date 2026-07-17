@@ -76,21 +76,3 @@
   object-fit: contain;
   pointer-events: none;
 }
-
-@media (max-width: 760px) {
-  .sheader {
-    height: auto;
-    padding: calc(28 * var(--u)) calc(20 * var(--u));
-  }
-  .sheader__brand,
-  .sheader__deco {
-    display: none;
-  }
-  .sheader__titles {
-    position: static;
-  }
-  .sheader__vn,
-  .sheader__en {
-    white-space: normal;
-  }
-}

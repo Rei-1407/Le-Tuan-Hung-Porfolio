@@ -11,9 +11,9 @@
 }
 
 .ad {
-  max-width: 980px;
+  max-width: 1520px;
   margin: 0 auto;
-  padding: 20px 20px 80px;
+  padding: 24px 32px 80px;
 }
 
 .ad h1 {
@@ -220,10 +220,20 @@
   resize: vertical;
 }
 
+/* VN and EN side by side — wide admin windows shouldn't stack them. */
 .ad-bilingual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
   border-left: 2px solid #2c3038;
   padding-left: 10px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 860px) {
+  .ad-bilingual {
+    grid-template-columns: 1fr;
+  }
 }
 
 .ad-error {
@@ -237,6 +247,18 @@
 }
 
 /* ---- images ---- */
+/* Image lists tile across the available width instead of one long column. */
+.ad-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 12px 16px;
+  align-items: start;
+}
+
+.ad-images > .ad-mini {
+  align-self: center;
+}
+
 .ad-image {
   margin-bottom: 12px;
 }
@@ -255,8 +277,8 @@
 }
 
 .ad-image__row > img {
-  width: 120px;
-  height: 84px;
+  width: 148px;
+  height: 104px;
   object-fit: contain;
   background: repeating-conic-gradient(#22262c 0 25%, #191c21 0 50%) 0 0 / 16px 16px;
   border-radius: 8px;
@@ -397,7 +419,7 @@
   border: 1px solid #2c3038;
   border-radius: 14px;
   padding: 22px;
-  max-width: 720px;
+  max-width: 920px;
   width: 100%;
   max-height: 85vh;
   overflow: auto;
