@@ -60,7 +60,7 @@
   line-height: calc(156 / 128);
   color: var(--c-white);
   white-space: nowrap;
-  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: hero-rise 1s cubic-bezier(0.34, 1.35, 0.64, 1) both;
 }
 
 .hero__row {
@@ -74,13 +74,13 @@
   line-height: calc(44 / 36);
   color: var(--c-white);
   white-space: nowrap;
-  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  animation: hero-rise 1s cubic-bezier(0.34, 1.35, 0.64, 1) 0.15s both;
 }
 
 @keyframes hero-rise {
   from {
     opacity: 0;
-    transform: translateY(calc(24 * var(--u)));
+    transform: translateY(calc(34 * var(--u))) scale(0.97);
   }
   to {
     opacity: 1;

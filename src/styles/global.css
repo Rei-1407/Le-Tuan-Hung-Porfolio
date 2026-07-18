@@ -54,18 +54,41 @@ a {
   color: var(--c-red-brand);
 }
 
-/* Scroll reveal — animation is our own addition, layout stays as designed. */
+/* Scroll reveal — animation is our own addition, layout stays as designed.
+   Transform gets a springy overshoot so blocks "pop" into place; opacity
+   stays on a plain ease so nothing flashes. */
 .reveal {
   opacity: 0;
-  transform: translateY(calc(28 * var(--u)));
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(calc(30 * var(--u))) scale(0.97);
+  transition: opacity 0.55s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.8s cubic-bezier(0.34, 1.35, 0.64, 1);
   will-change: opacity, transform;
 }
 
 .reveal.is-in {
   opacity: 1;
   transform: none;
+}
+
+/* Idle motion for the food doodles — slow, small, phase-shifted per element. */
+@keyframes food-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(-6 * var(--u))) rotate(-1.5deg);
+  }
+}
+
+@keyframes mascot-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-7 * var(--u)));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

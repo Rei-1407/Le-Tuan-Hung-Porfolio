@@ -142,7 +142,7 @@
               "rowGap": 33,
               "cells": [
                 { "images": [{ "src": "/assets/branding/product-burger.png", "alt": "Burger box", "pos": { "x": 41, "y": 49, "w": 460, "h": 447 } }] },
-                { "images": [{ "src": "/assets/branding/product-chips.png", "alt": "Fries packaging", "pos": { "x": -41, "y": -39, "w": 617, "h": 588 } }] },
+                { "images": [{ "src": "/assets/branding/product-chips.png", "alt": "Fries packaging", "pos": { "x": -49, "y": -52, "w": 617, "h": 588 } }] },
                 { "images": [{ "src": "/assets/branding/product-hotdog.png", "alt": "Hotdog box", "pos": { "x": 17, "y": 84, "w": 479, "h": 342 } }] },
                 {
                   "images": [

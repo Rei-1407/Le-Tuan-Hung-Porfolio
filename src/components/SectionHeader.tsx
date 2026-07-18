@@ -2,6 +2,7 @@ import type { Project } from "../types/content";
 import { asset } from "../lib/asset";
 import { rich } from "../lib/richtext";
 import { sameSelection, useEditing } from "../admin/EditingContext";
+import Reveal from "./Reveal";
 import "./SectionHeader.css";
 
 /** The 1920x135 title strip that opens every project.
@@ -22,16 +23,16 @@ export default function SectionHeader({ project }: { project: Project }) {
       onClickCapture={editing ? (e) => { e.preventDefault(); editing.select(sel); } : undefined}
     >
       {headerLogo && (
-        <div className="sheader__brand">
+        <Reveal className="sheader__brand">
           <img className="sheader__logo" src={asset(headerLogo.src)} alt={headerLogo.alt} />
           {headerWordmark && <span className="sheader__wordmark u-brand">{headerWordmark}</span>}
-        </div>
+        </Reveal>
       )}
 
-      <div className="sheader__titles">
+      <Reveal className="sheader__titles">
         <p className="sheader__vn">{header && rich(header.vn)}</p>
         <p className="sheader__en">{header && rich(header.en)}</p>
-      </div>
+      </Reveal>
 
       {headerDecorations?.map((d, i) => (
         <img
@@ -45,6 +46,7 @@ export default function SectionHeader({ project }: { project: Project }) {
             top: `calc(${d.y} * var(--u))`,
             width: `calc(${d.w} * var(--u))`,
             height: `calc(${d.h} * var(--u))`,
+            animationDelay: `${-(i * 1.7 + 0.5).toFixed(1)}s`,
           }}
         />
       ))}

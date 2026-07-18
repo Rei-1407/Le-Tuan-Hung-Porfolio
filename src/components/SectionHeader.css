@@ -75,4 +75,11 @@
   position: absolute;
   object-fit: contain;
   pointer-events: none;
+  animation: food-bob 5.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheader__deco {
+    animation: none;
+  }
 }

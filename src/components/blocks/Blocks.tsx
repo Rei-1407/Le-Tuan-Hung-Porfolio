@@ -155,13 +155,17 @@ function MascotRow({ b }: { b: MascotRowBlock }) {
     <div className="blk-mascots" style={{ paddingLeft: u(b.inset), paddingRight: u(b.inset) }}>
       {b.items.map((m, i) => (
         <Reveal key={i} style={{ transitionDelay: `${i * 110}ms` }}>
-          <img
-            className="blk-mascots__img"
-            src={asset(m.src)}
-            alt={m.alt}
-            loading="lazy"
-            style={{ width: u(m.w), height: u(m.h) }}
-          />
+          {/* separate layer for the idle bob so it never fights the reveal
+              slide (wrapper) or the hover pop (img) over `transform` */}
+          <span className="blk-mascots__bob" style={{ animationDelay: `${-(i * 1.15 + 0.3).toFixed(2)}s` }}>
+            <img
+              className="blk-mascots__img"
+              src={asset(m.src)}
+              alt={m.alt}
+              loading="lazy"
+              style={{ width: u(m.w), height: u(m.h) }}
+            />
+          </span>
         </Reveal>
       ))}
     </div>
