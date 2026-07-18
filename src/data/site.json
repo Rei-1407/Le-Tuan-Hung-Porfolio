@@ -196,7 +196,7 @@
             {
               "type": "banner",
               "mt": 43,
-              "media": { "src": "/assets/branding/animlogo.png", "alt": "HOTNDOGS logo animation" },
+              "media": { "src": "/assets/branding/animlogo.gif", "alt": "HOTNDOGS logo animation" },
               "inset": 282,
               "w": 1356
             },

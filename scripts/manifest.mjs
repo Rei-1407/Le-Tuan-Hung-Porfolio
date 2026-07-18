@@ -1,7 +1,7 @@
 /* Single source of truth for every image the site uses.
  *
  * Each entry maps a Figma node to a file under public/assets:
- *   id     — node id in the Portfolio file (EIaHHdCyLDu9uJnd6k4pZG)
+ *   id     — node id in the Portfolio file (cOlXV8ARFTUoFnxj8gWwm7)
  *   out    — destination path relative to public/assets
  *   frame  — which reference screenshot the node lives in (for placeholders)
  *   x/y/w/h— node bounds in design pixels, relative to its frame
@@ -11,7 +11,7 @@
  * gen-placeholders.mjs (temporary crops from the low-res reference shots).
  */
 
-export const FILE_KEY = "EIaHHdCyLDu9uJnd6k4pZG";
+export const FILE_KEY = "cOlXV8ARFTUoFnxj8gWwm7";
 
 export const FRAMES = {
   branding: { ref: "branding.png", w: 1920, h: 7362 },

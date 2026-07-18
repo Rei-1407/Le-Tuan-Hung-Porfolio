@@ -6,7 +6,7 @@ Website portfolio dựng **bám sát pixel** theo thiết kế Figma, kèm **tra
 |---|---|
 | **Live site** | https://rei-1407.github.io/Le-Tuan-Hung-Porfolio/ |
 | **Trang quản trị** | https://rei-1407.github.io/Le-Tuan-Hung-Porfolio/#/admin |
-| **Thiết kế gốc** | [Figma — Portfolio](https://www.figma.com/design/EIaHHdCyLDu9uJnd6k4pZG/Portfolio) |
+| **Thiết kế gốc** | [Figma — Portfolio (Copy)](https://www.figma.com/design/cOlXV8ARFTUoFnxj8gWwm7/Portfolio--Copy-) |
 | **Stack** | Vite 8 + React 19 + TypeScript, CSS thuần (không framework UI), HashRouter |
 | **Hosting** | GitHub Pages, build bằng GitHub Actions khi push lên `main` |
 
@@ -85,7 +85,7 @@ Chi tiết đáng biết:
 
 ## 3. Pipeline ảnh từ Figma
 
-**Trạng thái hiện tại: `public/assets` đang chứa ảnh TẠM độ phân giải thấp** (~28%), crop từ ảnh chụp frame trong `scripts/ref/`. Việc còn nợ: thay bằng ảnh gốc.
+**Trạng thái hiện tại: `public/assets` đã chứa ảnh GỐC** xuất thẳng từ file Figma (07/2026, qua Figma MCP với seat Full — 200 call/ngày). File thiết kế hiện hành là bản copy `cOlXV8ARFTUoFnxj8gWwm7` (node id giữ nguyên so với file cũ). Ảnh tạm độ phân giải thấp chỉ còn là lịch sử; `scripts/ref/` giữ lại để đối chiếu.
 
 - [`scripts/manifest.mjs`](scripts/manifest.mjs) — **nguồn sự thật duy nhất**: map node Figma → file ảnh (kèm tọa độ trên frame). Thêm/đổi ảnh thiết kế thì sửa file này.
 - [`scripts/figma-assets.mjs`](scripts/figma-assets.mjs) — tải ảnh gốc qua **Figma REST API** (không phải MCP — MCP gói Starter chỉ có 6 call/tháng, đã hết; REST API thì thoải mái):
@@ -126,7 +126,7 @@ Chi tiết đáng biết:
 
 | Việc | Trạng thái |
 |---|---|
-| **Ảnh gốc chất lượng cao** | Chờ FIGMA_TOKEN của chủ thiết kế → chạy script mục 3 |
+| **Ảnh gốc chất lượng cao** | ✅ Xong (07/2026) — tải từ file Figma copy qua MCP. Khối animlogo giờ dùng GIF động gốc (`animlogo.gif`). Ảnh packaging bị Figma clip tại mép frame nên CSS neo `object-position: left` |
 | **Font Super Caramel** (wordmark HOTNDOGS) | Font bản quyền, chưa có file. Bỏ vào `public/fonts/SuperCaramel.woff2` (hoặc `.otf`) là tự ăn (`@font-face` khai trong `index.html`). Đang fallback Montserrat |
 | **Video "Con Rồng Cháu Tiên"** | Đang hiện poster tĩnh. Có link YouTube → chủ web tự dán trong admin (khối Video nhận nguyên URL) |
 | **Trang Concept / Game / My CV** | Figma chưa thiết kế xong. Đang dùng chung bìa "UX-UI & CONCEPT GAME" + placeholder "đang cập nhật". Khi có thiết kế: thêm project + block qua admin, hoặc nếu layout lạ thì thêm block type mới (quy trình ở mục 1) |

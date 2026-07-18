@@ -354,6 +354,9 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  /* the artwork is pre-clipped at the 1920 frame edge (452 of 474 design px),
+     so anchor it left to keep the visible part on-position */
+  object-position: left;
 }
 
 .blk-brand__cta {
