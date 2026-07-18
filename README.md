@@ -94,6 +94,7 @@ Chi tiết đáng biết:
   ```
   Token tạo ở Figma → Settings → Security → Personal access tokens (scope File content: Read). Cần tài khoản xem được file thiết kế.
 - [`scripts/gen-placeholders.mjs`](scripts/gen-placeholders.mjs) — sinh lại bộ ảnh tạm từ `scripts/ref/` (chỉ cần khi chưa có token mà đổi manifest).
+- **⚠ Ảnh cần nền trong suốt** (icon trắng trên band đỏ, mascot, 2 logo, ảnh bao bì mờ 10%): export node qua Figma MCP bị **nén phẳng alpha thành nền trắng**. 12 file này được dựng lại từ ảnh nguồn raw (`rawImages` của `download_assets` — giữ alpha) + vector lót trắng của mascot, theo đúng hình học node (xoay/lật/crop) — xem [`scripts/rebuild-transparent.mjs`](scripts/rebuild-transparent.mjs). REST API (`figma-assets.mjs`) không dính lỗi này, nhưng nhớ: node bao bì cần opacity 10% và các ảnh này đừng ghi đè bằng bản export phẳng.
 
 ---
 

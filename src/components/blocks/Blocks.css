@@ -347,7 +347,15 @@
   top: calc(273 * var(--u));
   width: calc(474 * var(--u));
   height: calc(487 * var(--u));
-  z-index: 2;
+  /* Figma paints this decor behind the vision/mission copy */
+  z-index: 0;
+}
+
+.blk-brand__vision-vn,
+.blk-brand__vision-en,
+.blk-brand__mission-vn,
+.blk-brand__mission-en {
+  z-index: 1;
 }
 
 .blk-brand__packaging img {
