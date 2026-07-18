@@ -4,6 +4,7 @@ import { asset } from "../lib/asset";
 import { sameSelection, useEditing } from "../admin/EditingContext";
 import Hero from "./Hero";
 import ProjectSection from "./ProjectSection";
+import Reveal from "./Reveal";
 import "./PageView.css";
 
 export default function PageView({ page }: { page: Page }) {
@@ -34,8 +35,10 @@ export default function PageView({ page }: { page: Page }) {
           data-selected={editing && sameSelection(editing.selected, { kind: "soon" }) ? "true" : undefined}
           onClickCapture={editing ? (e) => { e.preventDefault(); editing.select({ kind: "soon" }); } : undefined}
         >
-          <p className="pageview__soon-vn">{page.comingSoon.vn}</p>
-          <p className="pageview__soon-en">{page.comingSoon.en}</p>
+          <Reveal>
+            <p className="pageview__soon-vn">{page.comingSoon.vn}</p>
+            <p className="pageview__soon-en">{page.comingSoon.en}</p>
+          </Reveal>
         </section>
       )}
       {editing && (

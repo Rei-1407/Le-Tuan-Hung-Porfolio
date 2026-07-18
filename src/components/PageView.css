@@ -37,4 +37,22 @@
 .pageview__soon-en {
   font-weight: 400;
   opacity: 0.8;
+  animation: soon-pulse 3s ease-in-out infinite;
+}
+
+@keyframes soon-pulse {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageview,
+  .pageview__soon-en {
+    animation: none;
+  }
 }
